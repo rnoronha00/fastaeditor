@@ -10,24 +10,18 @@ fastaFile.close()
 
 #ignore the first line(> name) and store the sequence
 fastaSequence = ""
-
 for line in fastaSection:
-
     if (line[0] != ">"):
         fastaSequence += line
-
 
 #add spaces and newlines to the fasta sequence
 newLine = 0
 formatFasta = ""
 for i in range(0, len(fastaSequence)):
-    
     if i % 10 == 0 and i > 0:
-
         if newLine == 5:
             formatFasta += fastaSequence[i-10: i] + "\n\n"
             newLine = 0
-
         else:
             formatFasta += fastaSequence[i-10: i] + " "
             newLine += 1
@@ -39,5 +33,3 @@ formatFasta = fastaSection[0] + "\n\n" + formatFasta
 fastaText = open(fastaFile.name.split(".")[0] + "Formatted.txt", "w")
 fastaText.write(formatFasta)
 fastaText.close()
-
-
