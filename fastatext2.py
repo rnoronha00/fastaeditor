@@ -6,6 +6,7 @@
 #user should enter the name of the file
 fastaFile = open("filename", 'r')
 fastaSection = fastaFile.read().split("\n")
+fastaFile.close()
 
 #ignore the first line(> name) and store the sequence
 fastaSequence = ""
