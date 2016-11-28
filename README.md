@@ -1,2 +1,2 @@
 # fastaeditor
-Edits a fasta file
+fastaeditor formats a fasta file
